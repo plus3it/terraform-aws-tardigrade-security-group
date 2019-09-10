@@ -5,3 +5,15 @@ update_configs:
   - package_manager: "terraform"
     directory: "/"
     update_schedule: "daily"
+
+  - package_manager: "terraform"
+    directory: "/tests/create_sg"
+    update_schedule: "daily"
+
+  - package_manager: "terraform"
+    directory: "/tests/no_create_sg"
+    update_schedule: "daily"
+
+  - package_manager: "terraform"
+    directory: "/tests/use_all_variables"
+    update_schedule: "daily"
