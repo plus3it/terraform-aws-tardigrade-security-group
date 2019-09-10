@@ -12,7 +12,7 @@ Terraform module to create an EC2 security group
 | ingress\_rules | A schema list of ingress rules for the Security Group, see <https://www.terraform.io/docs/providers/aws/r/security_group.html#ingress> | list | `<list>` | no |
 | name | Name of the Security Group | string | n/a | yes |
 | revoke\_rules\_on\_delete | Determines whether to forcibly remove rules when destroying the security group | string | `"false"` | no |
-| tags | A map of tags for the Security Group | map | `<map>` | no |
+| tags | A map of tags for the Security Group | map(string) | `<map>` | no |
 | vpc\_id | VPC ID in which to create the Security Group | string | n/a | yes |
 
 ## Outputs
