@@ -1,6 +1,6 @@
 variable "create_sg" {
-  type        = string
   description = "Toggle controlling whether to create the security group"
+  type        = bool
   default     = true
 }
 
