@@ -11,7 +11,7 @@ module "no_create_sg" {
   create_sg = false
   name      = "tardigrade-security-group-testing"
   vpc_id    = null
-  tags      = {
+  tags = {
     environment = "testing"
   }
 }
