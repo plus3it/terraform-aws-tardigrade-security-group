@@ -23,24 +23,24 @@ module "use_all_variables" {
   vpc_id    = module.vpc.vpc_id
   ingress_rules = [
     {
-      "from_port" = "0",
-      "to_port" = "0",
-      "protocol" = "-1",
+      "from_port"   = "0",
+      "to_port"     = "0",
+      "protocol"    = "-1",
       "cidr_blocks" = ["0.0.0.0/0"]
     }
   ]
 
   egress_rules = [
     {
-      "from_port" = "0",
-      "to_port" = "0",
-      "protocol" = "-1",
+      "from_port"   = "0",
+      "to_port"     = "0",
+      "protocol"    = "-1",
       "cidr_blocks" = ["0.0.0.0/0"]
     }
   ]
 
   revoke_rules_on_delete = true
-  tags      = {
+  tags = {
     environment = "testing"
   }
 }
