@@ -4,6 +4,12 @@ Terraform module to create an EC2 security group
 
 
 <!-- BEGIN TFDOCS -->
+## Requirements
+
+| Name | Version |
+|------|---------|
+| terraform | >= 0.12 |
+
 ## Providers
 
 | Name | Version |
@@ -13,7 +19,7 @@ Terraform module to create an EC2 security group
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:-----:|
+|------|-------------|------|---------|:--------:|
 | name | Name of the Security Group | `string` | n/a | yes |
 | vpc\_id | VPC ID in which to create the Security Group | `string` | n/a | yes |
 | create\_sg | Toggle controlling whether to create the security group | `bool` | `true` | no |
