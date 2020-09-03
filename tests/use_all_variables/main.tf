@@ -18,9 +18,8 @@ module "use_all_variables" {
     aws = aws
   }
 
-  create_sg = true
-  name      = "tardigrade-security-group-testing"
-  vpc_id    = module.vpc.vpc_id
+  name   = "tardigrade-security-group-testing"
+  vpc_id = module.vpc.vpc_id
   ingress_rules = [
     {
       "from_port"   = "0",

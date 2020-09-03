@@ -1,9 +1,3 @@
-variable "create_sg" {
-  description = "Toggle controlling whether to create the security group"
-  type        = bool
-  default     = true
-}
-
 variable "name" {
   description = "Name of the Security Group"
   type        = string

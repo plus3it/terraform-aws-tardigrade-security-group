@@ -18,9 +18,8 @@ module "create_security_group" {
     aws = aws
   }
 
-  create_sg = true
-  name      = "tardigrade-security-group-testing"
-  vpc_id    = module.vpc.vpc_id
+  name   = "tardigrade-security-group-testing"
+  vpc_id = module.vpc.vpc_id
   tags = {
     environment = "testing"
   }

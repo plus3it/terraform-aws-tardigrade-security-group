@@ -22,7 +22,6 @@ Terraform module to create an EC2 security group
 |------|-------------|------|---------|:--------:|
 | name | Name of the Security Group | `string` | n/a | yes |
 | vpc\_id | VPC ID in which to create the Security Group | `string` | n/a | yes |
-| create\_sg | Toggle controlling whether to create the security group | `bool` | `true` | no |
 | description | Description of the Security Group | `string` | `"Managed by Terraform"` | no |
 | egress\_rules | A schema list of egress rules for the Security Group, see <https://www.terraform.io/docs/providers/aws/r/security_group.html#egress> | `list` | `[]` | no |
 | ingress\_rules | A schema list of ingress rules for the Security Group, see <https://www.terraform.io/docs/providers/aws/r/security_group.html#ingress> | `list` | `[]` | no |
