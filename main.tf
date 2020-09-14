@@ -2,7 +2,6 @@ provider "aws" {
 }
 
 resource "aws_security_group" "this" {
-  count = var.create_sg ? 1 : 0
 
   name        = var.name
   description = var.description
