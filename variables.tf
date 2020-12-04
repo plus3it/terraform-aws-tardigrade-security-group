@@ -16,13 +16,13 @@ variable "description" {
 
 variable "ingress_rules" {
   description = "A schema list of ingress rules for the Security Group, see <https://www.terraform.io/docs/providers/aws/r/security_group.html#ingress>"
-  type        = list
+  type        = list(any)
   default     = []
 }
 
 variable "egress_rules" {
   description = "A schema list of egress rules for the Security Group, see <https://www.terraform.io/docs/providers/aws/r/security_group.html#egress>"
-  type        = list
+  type        = list(any)
   default     = []
 }
 
