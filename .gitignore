@@ -18,3 +18,8 @@ tardigrade-ci/
 # eclint
 .git/
 
+# terratest packaging
+tests/go.*
+
+# terraform lock-file
+.terraform.lock.hcl
