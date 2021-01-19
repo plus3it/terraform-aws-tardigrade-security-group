@@ -1,11 +1,11 @@
-provider "aws" {
-}
-
 resource "aws_security_group" "this" {
-
   name        = var.name
   description = var.description
   vpc_id      = var.vpc_id
+  tags        = var.tags
+
+  revoke_rules_on_delete = var.revoke_rules_on_delete
+
   dynamic "ingress" {
     for_each = var.ingress_rules
     content {
@@ -35,6 +35,4 @@ resource "aws_security_group" "this" {
       to_port          = lookup(egress.value, "to_port", null)
     }
   }
-  revoke_rules_on_delete = var.revoke_rules_on_delete
-  tags                   = var.tags
 }
