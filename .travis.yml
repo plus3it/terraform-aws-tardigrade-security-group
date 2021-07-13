@@ -1,19 +1,31 @@
 dist: bionic
 
-language: node_js
-
-node_js:
-  - "12"
-
 stages:
   - lint
   - deploy
+  - test
+
+if: branch = master OR type = pull_request
+
+stage: test
+
+name: Integration Tests
+
+language: python
+
+python:
+  - "3.8"
+
+install: make mockstack/up
+
+script: make mockstack/pytest
+after_script: make mockstack/clean
 
 jobs:
   include:
     - stage: lint
       name: Project Syntax Verification
-      script: make && make docker/run target=lint
+      script: make docker/run target=lint
     - stage: deploy
       if: branch = master AND type = push AND repo = plus3it/terraform-aws-tardigrade-security-group
       before_script:
