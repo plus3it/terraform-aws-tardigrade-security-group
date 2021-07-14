@@ -24,9 +24,12 @@ jobs:
       script: make docker/run target=lint
     - stage: test
       name: Apply Terraform test configs in mockstack
-      install: make mockstack/up
+      install:
+        - make docker-compose/install
+        - make mockstack/up
       script: make mockstack/pytest
-      after_script: make mockstack/clean
+      after_script:
+        - make mockstack/clean
     - stage: deploy
       if: branch = master AND type = push AND repo = plus3it/terraform-aws-tardigrade-security-group
       before_script:
