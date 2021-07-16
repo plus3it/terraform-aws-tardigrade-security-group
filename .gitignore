@@ -8,18 +8,12 @@
 # .tfvars files
 *.tfvars
 
-# ignore this file
-!tfmodule-template.tf
-
 # tardigrade-ci
 .tardigrade-ci
 tardigrade-ci/
 
-# eclint
-.git/
-
-# terratest packaging
-tests/go.*
+# python caches
+tests/__pycache__/
 
 # terraform lock-file
 .terraform.lock.hcl
