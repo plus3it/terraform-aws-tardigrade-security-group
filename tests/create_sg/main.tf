@@ -1,5 +1,5 @@
 module "vpc" {
-  source = "github.com/terraform-aws-modules/terraform-aws-vpc?ref=v6.0.1"
+  source = "github.com/terraform-aws-modules/terraform-aws-vpc?ref=v6.2.0"
 
   name = "tardigrade-security-group-testing"
   cidr = "10.0.0.0/16"
